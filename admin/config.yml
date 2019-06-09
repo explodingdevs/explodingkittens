@@ -14,7 +14,7 @@ collections:
     create: true
     fields:
       - { label: Name, name: title, widget: string }
-      - { label: Twitter, name: twitter, widget: url, required: false }
+      - { label: Twitter, name: twitter, widget: string, required: false }
       - { label: Profile Image, name: profile, widget: image, required: false }
   - name: events
     label: Events
