@@ -24,14 +24,14 @@ collections:
       - { label: Name, name: title, widget: string }
       - { label: Dates, name: date, widget: date, required: false }
       - label: Game Master
-        Name: master
+        name: master
         widget: relation
         multiple: false
         collection: people
         searchFields: [title]
         valueField: title
       - label: Champions
-        Name: champion
+        name: champion
         widget: relation
         multiple: true
         collection: people
