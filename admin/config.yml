@@ -16,6 +16,9 @@ collections:
       - { label: Name, name: title, widget: string }
       - { label: Twitter, name: twitter, widget: string, required: false }
       - { label: Profile Image, name: profile, widget: image, required: false }
+  - name: tags
+    widget: hidden
+    default: people
   - name: events
     label: Events
     folder: events
@@ -23,6 +26,9 @@ collections:
     fields:
       - { label: Name, name: title, widget: string }
       - { label: Dates, name: date, widget: date, required: false }
+      - name: tags
+        widget: hidden
+        default: events
       - label: Game Master
         name: master
         widget: relation

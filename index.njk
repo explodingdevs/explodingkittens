@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+    {# {% include "components/head.njk" %} #}
+
+    <body>
+
+        <header>
+            <h1>Travelling Exploding Kittens</h1>
+        </header>
+
+        <main>
+            {% for event in collections.events | reverse %}
+                <section>
+                    <h2>{{ event.data.title }}</h2>
+                    <time datetime={{event.data.date}}>{{event.data.date}}</time>
+                    <h3>Game Master</h3>
+                    <p>{{event.data.master}}</p>
+                    <h3>Champions</h3>
+                    <ul>
+                        {% for champion in event.data.champion%}
+                            <li>{{champion}}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endfor %}
+        </main>
+
+        {# {% include "components/footer.njk" %} #}
+
+    </body>
+
+</html>
