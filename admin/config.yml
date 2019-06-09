@@ -32,6 +32,7 @@ collections:
         valueField: title
       - label: Champions
         name: champion
+        required: false
         widget: relation
         multiple: true
         collection: people
