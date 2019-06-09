@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: people
+    label: People
+    folder: people
+    create: true
+    fields:
+      - { label: Name, name: title, widget: string }
+      - { label: Twitter, name: twitter, widget: url, required: false }
+      - { label: Profile Image, name: profile, widget: image, required: false }
+  - name: events
+    label: Events
+    folder: events
+    create: true
+    fields:
+      - { label: Name, name: title, widget: string }
+      - { label: Dates, name: date, widget: date, required: false }
+      - label: Game Master
+        Name: master
+        widget: relation
+        multiple: false
+        collection: people
+        searchFields: [title]
+        valueField: title
+      - label: Champions
+        Name: champion
+        widget: relation
+        multiple: true
+        collection: people
+        searchFields: [title]
+        valueField: title

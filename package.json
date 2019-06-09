@@ -1,0 +1,26 @@
+{
+  "name": "travelling-exploding-kittens",
+  "version": "1.0.0",
+  "description": "The scoreboard for Travelling Exploding Kittens",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/explodingdevs/explodingkittens"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.2",
+    "luxon": "^1.12.1",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}
