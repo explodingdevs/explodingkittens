@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
-
-    {# {% include "components/head.njk" %} #}
+    <head>
+        <!-- excerpt from the base page template -->
+        <style>{% include "css/style.css" %}</style>
+        <title>Travelling Exploding Kittens</title>
+    </head>
 
     <body>
 
@@ -10,24 +13,49 @@
         </header>
 
         <main>
-            {% for event in collections.events | reverse %}
-                <section>
-                    <h2>{{ event.data.title }}</h2>
-                    <time datetime={{event.data.date}}>{{event.data.date}}</time>
-                    <h3>Game Master</h3>
-                    <p>{{event.data.master}}</p>
-                    <h3>Champions</h3>
-                    <ul>
-                        {% for champion in event.data.champion%}
-                            <li>{{champion}}</li>
-                        {% endfor %}
-                    </ul>
-                </section>
-            {% endfor %}
+            <p>Ah, say what now?</p>
+            <p>Travelling Exploding Kittens was first started at NDC Minnesota 2019. The Exploding Kittens party game is now travelling the world going from conference to conference.</p>
+            <p>Follow it on <a href="https://twitter.com/ExplodingDevs" target="_blank">Twitter</a> to see where it's going next and see how you can play!</p>
+            <div class="events">
+                {% set people = collections.people%}
+                {% for event in collections.events | reverse %}
+                    <section class="event">
+                        <div>
+                            <h2>{{ event.data.title }}</h2>
+                            <time datetime={{event.data.date}}>{{event.data.date | readableDate}}</time>
+                        </div>
+                        <div>
+                            <h3>Game Master</h3>
+                            <ul>
+                                <li>
+                                    {% for master in collections.people %}
+                                        {% if master.data.title == event.data.master %}
+                                            <img class="profile" src={{master.data.profile}} />
+                                        {% endif %}
+                                    {% endfor %}
+                                    {{event.data.master}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Champions</h3>
+                            <ul>
+                                {% for champion in event.data.champion%}
+                                    <li>
+                                        {% for champion in collections.people %}
+                                            {% if champion.data.title == event.data.champion %}
+                                                <img class="profile" src={{champion.data.profile}} />
+                                            {% endif %}
+                                        {% endfor %}
+                                        {{champion}}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </section>
+                {% endfor %}
+            </div>
         </main>
-
-        {# {% include "components/footer.njk" %} #}
-
     </body>
 
 </html>

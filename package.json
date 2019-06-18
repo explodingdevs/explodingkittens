@@ -6,6 +6,7 @@
   "scripts": {
     "start": "yarn run dev",
     "dev": "eleventy --serve",
+    "dev:gulp": "gulp watch",
     "build": "eleventy"
   },
   "repository": {
@@ -14,6 +15,11 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.2",
+    "gulp": "^4.0.0",
+    "gulp-prettier": "^2.1.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "luxon": "^1.12.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2"
