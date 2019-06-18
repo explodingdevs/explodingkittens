@@ -1,5 +1,21 @@
+
+body {
+    background: #b40a1d;
+    color: #fde8cf;
+    padding: 20px 50px;
+}
 h1 {
     text-align: center;
+}
+
+h1, h2, h3, h4 {
+    color: #ff9900;
+}
+
+a {
+    color: #f7931e;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
 }
 
 .events {
@@ -28,4 +44,30 @@ li {
 .profile {
     margin-right: 10px;
     width: 50px;
+}
+
+@media(max-width: 650px) {
+    body {
+        padding: 20px;
+    }
+
+    .events {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+
+        section {
+            > *:first-child {
+                grid-column: span 2;
+                justify-self: center;
+                padding-top: 30px;
+                display: flex;
+                align-items: center;
+
+                h2 {
+                    margin: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }

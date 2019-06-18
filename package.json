@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run dev",
     "dev": "eleventy --serve",
-    "dev:gulp": "gulp watch",
+    "dev:gulp": " gulp sassy && gulp watch",
     "build": "eleventy"
   },
   "repository": {
