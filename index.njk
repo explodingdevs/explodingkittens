@@ -33,9 +33,15 @@
                                     {% for master in collections.people %}
                                         {% if master.data.title == event.data.master %}
                                             <img class="profile" src={{master.data.profile}} />
+                                            {% if master.data.twitter %}
+                                                    <a href={{master.data.twitter}} target="_blank">
+                                                        {{event.data.master}}
+                                                    </a>
+                                            {% else %}
+                                                {{event.data.master}}
+                                            {% endif %}
                                         {% endif %}
                                     {% endfor %}
-                                    {{event.data.master}}
                                 </li>
                             </ul>
                         </div>
@@ -47,9 +53,15 @@
                                         {% for person in collections.people %}
                                             {% if person.data.title in champion %}
                                                 <img class="profile" src={{person.data.profile}} />
+                                                {% if person.data.twitter %}
+                                                    <a href={{person.data.twitter}} target="_blank">
+                                                        {{champion}}
+                                                    </a>
+                                                {% else %}
+                                                    {{champion}}
+                                                {% endif %}
                                             {% endif %}
                                         {% endfor %}
-                                        {{champion}}
                                     </li>
                                 {% endfor %}
                             </ul>
