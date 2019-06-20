@@ -44,9 +44,9 @@
                             <ul>
                                 {% for champion in event.data.champion%}
                                     <li>
-                                        {% for champion in collections.people %}
-                                            {% if champion.data.title == event.data.champion %}
-                                                <img class="profile" src={{champion.data.profile}} />
+                                        {% for person in collections.people %}
+                                            {% if person.data.title in champion %}
+                                                <img class="profile" src={{person.data.profile}} />
                                             {% endif %}
                                         {% endfor %}
                                         {{champion}}
