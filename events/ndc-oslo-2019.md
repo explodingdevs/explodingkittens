@@ -6,5 +6,7 @@ master: Dylan Beattie
 champion:
   - Amy Kapernick
   - Håvard H. Pettersen
+  - Layla Porter
+  - Adam Stephensen
 ---
 
