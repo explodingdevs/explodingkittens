@@ -32,7 +32,12 @@
                                 <li>
                                     {% for master in collections.people %}
                                         {% if master.data.title == event.data.master %}
-                                            <img class="profile" src={{master.data.profile}} />
+                                            {% if master.data.profile %}
+                                                <img class="profile" src={{master.data.profile}} />
+                                            {% else %}
+                                                <img class="profile" src="/static/img/exploding_kittens.png" />
+                                            {% endif %}
+                                            
                                             {% if master.data.twitter %}
                                                     <a href={{master.data.twitter}} target="_blank">
                                                         {{event.data.master}}
@@ -46,13 +51,19 @@
                             </ul>
                         </div>
                         <div>
+                            {% if event.data.champion.length > 0 %}
                             <h3>Champions</h3>
+                            {% endif %}
                             <ul>
                                 {% for champion in event.data.champion%}
                                     <li>
                                         {% for person in collections.people %}
                                             {% if person.data.title in champion %}
-                                                <img class="profile" src={{person.data.profile}} />
+                                                {% if person.data.profile %}
+                                                    <img class="profile" src={{person.data.profile}} />
+                                                {% else %}
+                                                    <img class="profile" src="/static/img/exploding_kittens.png" />
+                                                {% endif %}
                                                 {% if person.data.twitter %}
                                                     <a href={{person.data.twitter}} target="_blank">
                                                         {{champion}}
