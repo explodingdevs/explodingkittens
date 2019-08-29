@@ -6,5 +6,6 @@ master: Jonathan Mills
 champion:
   - Matt Henry
   - Nate Taylor
+  - Marcel de Vries
 ---
 
