@@ -6,5 +6,6 @@ master: Jeff Strauss
 champion:
   - Alexandra White
   - Sandi Irvin-Dinger
+  - Gabby Spurling
 ---
 
