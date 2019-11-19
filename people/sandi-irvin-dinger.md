@@ -1,7 +1,7 @@
 ---
 title: Sandi Irvin-Dinger
 twitter: 'https://twitter.com/sandiwhich'
-profile: /static/img/img_20191116_004842.jpg
+profile: /static/img/sandi-headshot.png
 tags: people
 ---
 
