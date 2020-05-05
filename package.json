@@ -14,18 +14,18 @@
     "url": "https://github.com/explodingdevs/explodingkittens"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.2",
+    "@11ty/eleventy": "^0.10.0",
     "gulp": "^4.0.0",
-    "gulp-prettier": "^2.1.0",
+    "gulp-prettier": "^3.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "luxon": "^1.12.1",
-    "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.0.2"
+    "luxon": "^1.24.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.7"
   },
   "dependencies": {
-    "clean-css": "^4.2.1",
+    "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"
   }
