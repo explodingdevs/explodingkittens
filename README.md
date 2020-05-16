@@ -1,12 +1,3 @@
-# Exploding Kittens
+# Travelling Exploding Kittens
 
-
-## Game
-https://explodingkittens.com/
-
-## Todo
-
-EVERYTHING!!!
-
-* Add previous games played.
-* Add games to be played.
+Code for the website [Travelling Exploding Kittens](https://travellingexplodingkittens.dev/), made by developers for developers to have an excuse to play games.
