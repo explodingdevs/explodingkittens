@@ -7,8 +7,8 @@ check: ## Check local enviroment is setup correctly
 build: check ## Install local dependencies
 	npm install
 
-.PHONY: run
-run: build ## Run website locally
+.PHONY: dev
+dev: build ## Run website locally
 	npm run dev
 
 .PHONY: help
